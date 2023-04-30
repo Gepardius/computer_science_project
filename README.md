@@ -8,13 +8,14 @@ The objective of this research is to demonstrate the effectiveness of using mach
 
 This project uses the following libraries:
 
-Pandas
+**Pandas
 
 Numpy
 
 Scikit-learn
 
-Matplotlib
+Matplotlib**
+
 
 
 
