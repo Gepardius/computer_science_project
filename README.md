@@ -17,20 +17,20 @@ To run this project, you need to have at least Python 3.0 installed on your comp
 
 After installing Python, you need to install the required libraries. You can do this using pip, the Python package manager. Open a command prompt or terminal window and run the following command:
 
-pip install pandas numpy scikit-learn matplotlib
+**pip install pandas numpy scikit-learn matplotlib**
 
 Running the Project:
 To run the project, you can use the command line or an integrated development environment (IDE) like Jupyter Notebook or PyCharm.
 
 Clone the repository to your local machine by running the following command in your terminal:
 
-git clone https://github.com/Gepardius/computer_science_project.git
+**git clone https://github.com/Gepardius/computer_science_project.git**
 
 Navigate to the project directory:
-cd computer_science_project
+**cd computer_science_project**
 
 
 Run the Python script:
-python CS_proj.py
+**python CS_proj.py**
 
 Note: The CS_proj.py script contains the code to load and preprocess the data, train and evaluate the machine learning models, and generate visualizations. 
