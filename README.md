@@ -8,20 +8,18 @@ The objective of this research is to demonstrate the effectiveness of using mach
 
 This project uses the following libraries:
 
-**Pandas
+Pandas
 
 Numpy
 
 Scikit-learn
 
-Matplotlib**
+Matplotlib
 
 
 
 
-Installation:
-
-To run this project, you need to have at least Python 3.0 installed on your computer. You can download Python from the official website: https://www.python.org/downloads/
+Installation: To run this project, you need to have at least Python 3.0 installed on your computer. You can download Python from the official website: https://www.python.org/downloads/
 
 After installing Python, you need to install the required libraries. You can do this using pip, the Python package manager. Open a command prompt or terminal window and run the following command:
 
