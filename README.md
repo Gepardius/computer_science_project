@@ -5,6 +5,8 @@ _The telecommunications industry has been grappling with the issue of customer c
 The research will create a supervised learning model based on past customer data such as usage statistics, demographics, and other features. The algorithms used include Logistic Regression, Decision Tree, Random Forest, and Gradient Boosting, and the results will be compared to determine which algorithm performs the best. To compare the performance of the different algorithms used in this research project, we will evaluate their predictions using several evaluation metrics such as accuracy, F1-score, precision, and recall. Accuracy is a metric that measures the proportion of correct predictions made by the model over all predictions. F1-score is the harmonic mean of precision and recall, and it is a metric that considers both false positives and false negatives in the prediction. Precision measures the proportion of true positives over all predicted positives, and recall measures the proportion of true positives over all actual positives. All the metrics will be used through Sklearn.
 The objective of this research is to demonstrate the effectiveness of using machine learning techniques in predicting customer churn in a telecom company. It also aims to provide valuable insights that can be used to improve retention strategies._
 
+**INSTRUCTIONS:**
+
 
 This project uses the following libraries:
 
