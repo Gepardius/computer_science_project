@@ -196,7 +196,7 @@ plt.bar(gb_importance_df_imp['Feature'][:10], gb_importance_df_imp['Importance']
 plt.xticks(rotation=90)
 plt.show()
 
-# Plot top 10 gradient boosting feature importances
+# Plot top 10 Logistic Regression Feature Coefficients
 plt.figure(figsize=(10, 5))
 plt.title('Logistic Regression Feature Coefficients')
 plt.bar(lr_coefficient_df_imp['Feature'][:10], lr_coefficient_df_imp['Coefficient'][:10])
