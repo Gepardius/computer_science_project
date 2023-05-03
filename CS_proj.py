@@ -17,20 +17,18 @@ DLMCSPCSP
 Customer Churn Prediction Using Machine Learning
 Developed by: Gal Bordelius
 """
-# Load Telco Customer Churn dataset
-# df = pd.read_csv('telco_customer_churn.csv')
-df = pd.read_csv('WA_Fn-UseC_-Telco-Customer-Churn.csv')
-# print(df.head())
 
-# Drop unnecessary columns
-df = df.drop(['customerID', 'TotalCharges'], axis=1)
+df = pd.read_csv('WA_Fn-UseC_-Telco-Customer-Churn.csv')  # Load Telco Customer Churn dataset
+df = df.drop(['customerID', 'TotalCharges'], axis=1)  # Drop unnecessary columns
 
-# Convert categorical variables to numerical
-df['gender'] = pd.get_dummies(df['gender'], drop_first=True)
-df = pd.get_dummies(df, columns=['Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], drop_first=True)
+df['gender'] = pd.get_dummies(df['gender'], drop_first=True)    # Convert categorical variables to numerical
+df = pd.get_dummies(df, columns=['Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService',
+                                 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+                                 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], drop_first=True)
 
 # Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(df.drop(['Churn'], axis=1), df['Churn'], test_size=0.15, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(df.drop(['Churn'], axis=1),
+                                                    df['Churn'], test_size=0.15, random_state=42)
 
 # Feature scaling
 scaler = StandardScaler()
@@ -88,10 +86,8 @@ print('F1 Score:', f1_score(y_test, gb_pred, pos_label='Yes'))
 print('Precision:', precision_score(y_test, gb_pred, pos_label='Yes'))
 print('Recall:', recall_score(y_test, gb_pred, pos_label='Yes'))
 
-# Set the width of the bars
+# graphical presentation
 barWidth = 0.2
-
-# Set the height of the bars
 lr_scores = [accuracy_score(y_test, lr_pred), f1_score(y_test, lr_pred, pos_label='Yes'),
              precision_score(y_test, lr_pred, pos_label='Yes'), recall_score(y_test, lr_pred, pos_label='Yes')]
 dt_scores = [accuracy_score(y_test, dt_pred), f1_score(y_test, dt_pred, pos_label='Yes'),
@@ -101,7 +97,6 @@ rf_scores = [accuracy_score(y_test, rf_pred), f1_score(y_test, rf_pred, pos_labe
 gb_scores = [accuracy_score(y_test, gb_pred), f1_score(y_test, gb_pred, pos_label='Yes'),
              precision_score(y_test, gb_pred, pos_label='Yes'), recall_score(y_test, gb_pred, pos_label='Yes')]
 
-# Set the position of the x ticks
 r1 = np.arange(len(lr_scores))
 r2 = [x + barWidth for x in r1]
 r3 = [x + barWidth for x in r2]
@@ -116,6 +111,5 @@ plt.bar(r4, gb_scores, color='#8a2be2', width=barWidth, edgecolor='white', label
 # Add xticks on the middle of the group bars
 plt.xticks([r + barWidth for r in range(len(lr_scores))], ['Accuracy', 'F1 Score', 'Precision', 'Recall'])
 
-# Add a legend and show the plot
-plt.legend()
-plt.show()
+plt.legend()    # show the legend
+plt.show()  # show the plot
